@@ -45,7 +45,7 @@ def number(n):
 @app.route('/number_template/<n>', strict_slashes=False)
 def number_template(n):
     try:
-        int(n)
+        n = int(n)
         return render_template("5-number.html", n=n)
     except ValueError:
         abort(404)
